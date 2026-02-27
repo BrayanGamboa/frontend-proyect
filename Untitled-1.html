@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+     
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+       background-color: #cf1010;
+      border-radius: 50%;
+      padding: 20px;
+      min-width: 300px;
+      min-height: 300px;
+      margin: 0 auto;
+      transition: 0.5s;
+    }
+    .card:hover {
+      background-color: blue;
+      transform: scale(1.2);
+      box-shadow: 0 0 50px 20px rgb(73, 14, 107);
+    }
+    .btn{
+      font-size: 20px;
+      width: auto;
+      height: 50px;
+      border-radius: 25px;
+    }
+  </style>
+  <script>
+    function activarModoSecreto() {
+      let body = document.querySelector('body');
+      body.style.backgroundColor = 'grey';
+
+      let textElements = document.getElementsByClassName('text');
+      for (let i = 0; i < textElements.length; i++) {
+        textElements[i].style.color = 'white';
+      }
+
+      let parrafo = document.getElementById('texto-secreto');
+      parrafo.innerText = '¡Has descubierto el secreto!';
+
+      let button = document.querySelector('input[type="button"]');
+      button.style.backgroundColor = 'black';
+    }
+  </script>
+</head>
+<body>
+  <div class="card">
+    
+  </div>
+
+  <h1 class="text">Titulo</h1>
+  <p class="text" id="texto-secreto">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero officia inventore eligendi consectetur deleniti maiores, exercitationem in illo praesentium cum quaerat totam earum tempora. Quae quos temporibus voluptatibus a quo.</p>
+  <input type="button" value="Activa el modo secreto" onclick="activarModoSecreto()" class="text btn">
+
+</body>
+</html>
