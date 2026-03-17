@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(255, 200, 0);
+}
+
+nav {
+  padding: 2vh;
+  color: white;
+  background-color: #444;
+}

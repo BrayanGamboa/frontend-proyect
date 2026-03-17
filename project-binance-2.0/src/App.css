@@ -1,0 +1,12 @@
+.contenidoApp {
+  display: flex;
+  min-height: 70vh;
+}
+
+header,
+nav,
+footer {
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
