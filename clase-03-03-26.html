@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #bombillo {
+      width: 50px;
+      height: 50px;
+      background-color: rgb(100, 100, 100);
+      /* margin: 20px auto; */
+      border-radius: 50px;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="button" value="Encender" id="btnSwitch" onclick="alternarLuz()">
+  <div id="bombillo"></div>
+
+  <div>
+    <br>
+    <input type="button" value="Sortear nombre" id="btnSortear" onclick="sortearNombre()">
+    <p id="nombreSorteado"></p>
+  </div>
+
+  <script>
+    let bombillo = document.getElementById("bombillo");
+    let btnSwitch = document.getElementById("btnSwitch");
+
+    let estadoLuz = false;
+    function alternarLuz() {
+      estadoLuz = !estadoLuz;
+      if (estadoLuz) {
+        bombillo.style.backgroundColor = "rgb(223, 223, 39)";
+        estadoLuz = true;
+        btnSwitch.value = "Apagar";
+      } else {
+        bombillo.style.backgroundColor = "rgb(100, 100, 100)";
+        estadoLuz = false;
+        btnSwitch.value = "Encender";
+      }
+    }
+
+    let nombres = ["Ana", "Luis", "Carlos", "María", "Sofía"];
+    function sortearNombre() {
+      let indiceAleatorio = Math.floor(Math.random() * nombres.length);
+      let nombreSorteado = nombres[indiceAleatorio];
+      document.getElementById("nombreSorteado").textContent = "Nombre sorteado: " + nombreSorteado;
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+.semafore{
+    width: 20%;
+    height: 50%;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    transform: translateX(50%);
+}
+
+.luz{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: background-color 0.5s ease;
+    border: 2px solid white;
+    margin: 2vh 0 1vh 0;
+}
+.verde{
+    background-color: green;
+}
+.rojo{
+    background-color: red;
+}
+
+*{
+  color: white;
+}
+
+input[type="button"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
