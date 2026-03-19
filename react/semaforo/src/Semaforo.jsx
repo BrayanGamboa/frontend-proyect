@@ -13,7 +13,9 @@ function Semaforo() {
         <input
           type="button"
           value="Cambiar semáforo"
-          onClick={() => setSemaforo(!semaforo)}
+          
+          onMouseEnter={() => setSemaforo(true)}
+          onMouseLeave={() => setSemaforo(false)}
         />
       </div>
     </>

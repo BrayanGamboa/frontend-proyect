@@ -25,6 +25,9 @@
 .rojo{
     background-color: red;
 }
+.amarillo{
+    background-color: yellow;
+}
 
 *{
   color: white;
@@ -37,4 +40,8 @@ input[type="button"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #45a049;
 }

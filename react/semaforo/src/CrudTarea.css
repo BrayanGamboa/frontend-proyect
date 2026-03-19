@@ -1,0 +1,56 @@
+.card-tarea {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tarea{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+}
+
+.card-category{
+    background-color: cadetblue;
+    color: white;
+    padding: 1vh;
+    border-radius: 15px;
+}
+
+.tareas-lista{
+    border-radius: 20px;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #e0e0e0;
+}
+
+.alerta{
+    background-color: #74d96b;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.delete{
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
