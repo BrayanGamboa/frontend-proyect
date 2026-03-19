@@ -1,13 +1,11 @@
-import './header.css'
+import './footer.css'
 
-function Header() {
+function Footer() {
   return (
-    <>
-      <footer>
-        <p>Derechos de autor © 2026 Binance. Todos los derechos reservados.</p>
-      </footer>
-    </>
+    <footer className="appFooter">
+      <p>Derechos de autor © 2026 Binance. Todos los derechos reservados.</p>
+    </footer>
   );
 }
 
-export default Header
+export default Footer
