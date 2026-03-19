@@ -1,11 +1,12 @@
-h1 {
+.appFooter {
+  padding: 1.3rem 1.6rem;
   text-align: center;
-  text-transform: uppercase;
-  color: rgb(255, 200, 0);
+  background: linear-gradient(135deg, #0c0f1a, #14172d);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
 }
 
-nav {
-  padding: 2vh;
-  color: white;
-  background-color: #444;
+.appFooter p {
+  margin: 0;
 }
