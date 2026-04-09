@@ -1,20 +1,15 @@
-import './App.css'
-import Header from './header'
-import Aside from './aside'
-import MainComponent from './main.component'
-import Footer from './footer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './Home'
 
 function App() {
   
   return (
-    <>
-      <Header />
-      <div className="contenidoApp">
-        <Aside />
-        <MainComponent />
-      </div>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

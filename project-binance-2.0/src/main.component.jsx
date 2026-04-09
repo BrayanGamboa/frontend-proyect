@@ -18,8 +18,7 @@ function MainComponent() {
 
         <button
           className="toggleButton"
-          onMouseEnter={() => setShowDetails(true)}
-          onMouseLeave={() => setShowDetails(false)}
+          onClick={() => setShowDetails(!showDetails)}
         >
           {showDetails ? "Ocultar detalles" : "Mostrar detalles"}
         </button>

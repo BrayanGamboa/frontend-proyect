@@ -84,3 +84,10 @@ img {
   border-radius: 16px;
   object-fit: contain;
 }
+
+@media screen and (max-width: 480px) {
+  aside {
+    width: 100%;
+  }
+
+}
