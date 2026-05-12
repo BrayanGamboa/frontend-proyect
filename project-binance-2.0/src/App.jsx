@@ -1,16 +1,18 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './Home'
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from './contexts/ThemeContext';
+import { AuthProvider }  from './contexts/AuthContext';
+import { AppRoutes }     from './routes/AppRoutes';
 
 function App() {
-  
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <AuthProvider>
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 
-export default App
+export default App;

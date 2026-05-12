@@ -1,0 +1,27 @@
+import { Routes, Route, Navigate } from "react-router-dom";
+import { ProtectedRoute } from "./ProtectedRoute";
+import { Layout } from "../components/layout/Layout";
+import { LoginPage } from "../pages/LoginPage";
+import { DashboardPage } from "../pages/DashboardPage";
+import { MarketPage } from "../pages/MarketPage";
+import { NotFoundPage } from "../pages/NotFoundPage";
+import { ProfileUser } from "../pages/ProfileUser";
+
+export function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/login" element={<LoginPage />} />
+
+      <Route element={<ProtectedRoute />}>
+        <Route element={<Layout />}>
+          <Route index element={<Navigate to="/dashboard" replace />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/market" element={<MarketPage />} />
+          <Route path="/profile" element={<ProfileUser />} />
+        </Route>
+      </Route>
+
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
+  );
+}

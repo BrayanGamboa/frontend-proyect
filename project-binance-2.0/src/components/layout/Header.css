@@ -1,0 +1,112 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1.5rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Brand ──────────────────────────────────────────────────── */
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.header__logo {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.header__name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+}
+
+/* ── Nav ────────────────────────────────────────────────────── */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.header__link {
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.header__link:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.header__link.active {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+/* ── Actions ────────────────────────────────────────────────── */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header__username {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.header__logout {
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.header__logout:hover {
+  color: var(--color-down);
+  border-color: var(--color-down);
+  background: var(--color-down-bg);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .header__nav {
+    display: none;
+  }
+  .header__username {
+    display: none;
+  }
+}
